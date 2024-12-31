@@ -1,10 +1,7 @@
 #
 # ~/.bashrc
+# 
 #
-
-# Environment variable 
- export HYPRSHOT_DIR="~/Pictures"
- 
 # Bind
 
  eval "$(starship init bash)"
@@ -14,4 +11,13 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias vim='nvim'
+
+
+# Dir Aliases
+alias work="cd ~/Documents/Projects"
+alias download="cd ~/Downloads"
+alias document="cd ~/Documents"
 PS1='\u/\W\$ '
+
+alias sddmconfig='sudo vim /usr/lib/sddm/sddm.conf.d/default.conf'
+alias loginthemes="cd /usr/share/sddm/themes/"
