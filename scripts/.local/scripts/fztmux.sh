@@ -2,7 +2,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/projects ~/work ~/personal -mindepth 1 -maxdepth 2 -type d | fzf)
+    selected=$(find  ~/.config/nvim/ ~/projects ~/work ~/personal  -maxdepth 2 -type d ! -name "*/.pw/*" | fzf)
 fi
 
 if [[ -z $selected ]]; then
