@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-  fzf --preview "cat {}" --bind "enter:become(nvim {})"
+find -maxdepth 5 -type f ! -path "*/.vscode*/*" ! -path "*/.dotnet/*" ! -path "*/node_modules/*" ! -path "*/.git/*" ! -path "*/.npm/*" | fzf --preview "cat {}" --bind "enter:become(nvim {})"
 
