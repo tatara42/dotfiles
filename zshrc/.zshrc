@@ -37,7 +37,7 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
 
-# Uncomment the following line to disable auto-setting terminal title.
+# Uncomment the following line to disable auto-setting terminalftitle.
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
@@ -103,20 +103,22 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 alias vim="nvim"
 alias cls="clear -x"
+alias battery="sudo tlp-stat -b"
 
 
 #scripts
-function run_my_fztmux {
-  ~/.local/scripts/fztmux.sh
+function tmux-sessionizer {
+  ~/.local/bin/tmux-sessionizer
 }
-zle -N run_my_fztmux
-bindkey "^T" run_my_fztmux
+zle -N tmux-sessionizer
 
-function run_my_fznvim {
-  ~/.local/scripts/fznvim.sh
+function vim-there {
+  ~/.local/bin/vim-there
 }
-zle -N run_my_fznvim
-bindkey "^N" run_my_fznvim
+zle -N vim-there
+
+bindkey "^F" tmux-sessionizer
+bindkey "^N" vim-there
 
 
 
