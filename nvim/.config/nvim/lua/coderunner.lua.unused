@@ -1,0 +1,28 @@
+vim.api.nvim_set_keymap("n", "<Leader>r", [[<cmd>lua run_code_by_filetype()<CR>]], { noremap = true, silent = true })
+
+function run_code_by_filetype()
+  local filetype = vim.o.filetype
+  local file = vim.fn.expand("%:p") -- Get the current file name
+  local term = "TermExec direction=float "
+  if filetype == "python" then
+    vim.cmd(term .. "cmd='python3 " .. file .. "'")
+  elseif filetype == "lua" then
+    vim.cmd(term .. "cmd='lua " .. file .. "'")
+  elseif filetype == "javascript" then
+    vim.cmd(term .. "cmd='node " .. file .. "'")
+  elseif filetype == "html" then
+    vim.cmd(term .. "cmd='google-chrome-stable " .. file .. "'")
+  elseif filetype == "php" then
+    vim.cmd(term .. "cmd='php " .. file .. "'")
+  elseif filetype == "ruby" then
+    vim.cmd(term .. "cmd='ruby " .. file .. "'")
+  elseif filetype == "cpp" then
+    vim.cmd(term .. "cmd='g++ " .. file .. " -o main && ./main'")
+  elseif filetype == "c" then
+    vim.cmd(term .. "cmd='gcc " .. file .. " -o main && ./main'")
+  elseif filetype == "cs" then
+    vim.cmd(term .. "cmd='dotnet run " .. file .. "'")
+  else
+    vim.cmd('!echo "Unsupported filetype: ' .. filetype .. '"')
+  end
+end
