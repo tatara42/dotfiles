@@ -16,3 +16,4 @@ require("lazy").setup("plugins")
 
 vim.cmd("colorscheme gruvbox")
 vim.cmd("set relativenumber")
+vim.cmd("set conceallevel=2")

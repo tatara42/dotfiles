@@ -117,7 +117,20 @@ function vim-there {
 }
 zle -N vim-there
 
-bindkey "^F" tmux-sessionizer
+function fullscreen {
+  ~/.local/bin/fullscreen
+  export $FULLSCREEN=TRUE
+}
+zle -N fullscreen
+
+function windowed {
+  ~/.local/bin/windowed
+  export $FULLSCREEN=FALSE
+}
+
+zle -N fullscreen
+
+
 bindkey "^N" vim-there
 
 
@@ -125,3 +138,5 @@ bindkey "^N" vim-there
 # bindkey '^T' '~/.local/scripts/fztmux.sh'
 # bindkey '^N' '~/.local/scripts/fznvim.sh'
 
+export PATH="/home/murasaki/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/murasaki/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
