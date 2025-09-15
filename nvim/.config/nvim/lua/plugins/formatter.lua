@@ -7,6 +7,7 @@ return {
 		conform.setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
+				go = { "golines" },
 				php = { "pretty-php" },
 				javascript = { "prettierd", "prettier" },
 				typescript = { "prettierd", "prettier" },
@@ -14,13 +15,16 @@ return {
 				c = { "clang-format" },
 				bash = { "shfmt" },
 				sh = { "shfmt" },
+				yaml = { "yamlfmt" },
+				cmake = { "cmakelang" },
 			},
 			format_on_save = false,
 
-			format_after_save = {
-				lsp_fallback = true,
-				stop_after_first = true,
-			},
+			-- format_after_save = {
+			-- 	lsp_fallback = true,
+			-- 	stop_after_first = true,
+			-- },
+			format_after_save = false,
 		})
 
 		vim.keymap.set({ "n", "v" }, "<leader>fm", function()

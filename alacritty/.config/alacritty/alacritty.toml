@@ -1,33 +1,20 @@
+general.import = [ "~/.config/omarchy/current/theme/alacritty.toml" ]
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-size = 15.0
+normal = { family = "JetBrainsMono Nerd Font" }
+bold = { family = "JetBrainsMono Nerd Font" }
+italic = { family = "JetBrainsMono Nerd Font" }
+size = 15
 
-[font.bold]
-# family = "MesloLGS Nerd Font Mono"
-family = "CaskaydiaCove Nerd Font"
-style = "Bold"
+[window]
+padding.x = 2
+padding.y = 2
+decorations = "None"
 
-[font.bold_italic]
-family = "CaskaydiaCove Nerd Font"
-# family = "MesloLGS Nerd Font Mono"
-style = "Bold Italic"
-
-[font.italic]
-family = "CaskaydiaCove Nerd Font"
-# family = "MesloLGS Nerd Font Mono"
-style = "Italic"
-
-[font.normal]
-# family = "MesloLGS Nerd Font Mono"
-family = "CaskaydiaCove Nerd Font"
-style = "Regular"
-
-[general]
-
-import = [
-  
-  "~/.config/alacritty/themes/themes/gruvbox_dark.toml"
+[keyboard]
+bindings = [
+{ key = "F11", action = "ToggleFullscreen" }
 ]

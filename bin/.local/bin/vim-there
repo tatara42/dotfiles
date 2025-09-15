@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
 EXCLUDED_DIRS=(
-    ".vscode"
-    ".dotnet"
-    "node_modules"
-    ".git"
-    ".npm"
+  ".vscode"
+  ".dotnet"
+  "node_modules"
+  ".git"
+  ".npm"
+  # "build"
+  ".cache"
 )
 
 MAXDEPTH=5
@@ -13,16 +15,16 @@ MAXDEPTH=5
 FIND_CMD="find -maxdepth $MAXDEPTH -type f"
 
 for dir in "${EXCLUDED_DIRS[@]}"; do
-    FIND_CMD+=" ! -path \"*/$dir/*\""
+  FIND_CMD+=" ! -path \"*/$dir/*\""
 done
 
-if ! command -v fzf &> /dev/null; then
-    echo "Error: fzf not found in PATH. Please install it." >&2
-    exit 1
+if ! command -v fzf &>/dev/null; then
+  echo "Error: fzf not found in PATH. Please install it." >&2
+  exit 1
 fi
-if ! command -v nvim &> /dev/null; then
-    echo "Error: nvim not found in PATH. Please install it." >&2
-    exit 1
+if ! command -v nvim &>/dev/null; then
+  echo "Error: nvim not found in PATH. Please install it." >&2
+  exit 1
 fi
 
 eval "$FIND_CMD" | fzf --preview "cat {}" --bind "enter:become(nvim {})"

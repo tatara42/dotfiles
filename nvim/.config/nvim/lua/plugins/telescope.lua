@@ -16,12 +16,12 @@ return {
 				},
 			})
 			local builtin = require("telescope.builtin")
-			vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-			vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
-			vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
-			vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
-			vim.keymap.set("n", "<leader>fe", builtin.diagnostics, {})
-			vim.keymap.set("n", "/", builtin.current_buffer_fuzzy_find, {})
+			vim.keymap.set("n", "<leader>ff", builtin.find_files, {desc="Find Files"})
+			vim.keymap.set("n", "<leader>fl", builtin.live_grep, {desc="Live Grep"})
+			vim.keymap.set("n", "<leader>fb", builtin.buffers, {desc="List Buffer"})
+			vim.keymap.set("n", "<leader>fh", builtin.help_tags, {desc="Help Tags"})
+			vim.keymap.set("n", "<leader>fd", builtin.diagnostics, {desc="Show Buffer Diagnostics"})
+			-- vim.keymap.set("n", "/", builtin.current_buffer_fuzzy_find, {})
 
 			require("telescope").load_extension("ui-select")
 		end,

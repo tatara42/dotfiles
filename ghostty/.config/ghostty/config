@@ -1,6 +1,6 @@
 # This is the configuration file for Ghostty.
 #THEME
-theme = dark:GruvboxDark,light:gruvbox_material
+config-file = "./theme"
 
 
 
