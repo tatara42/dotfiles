@@ -76,6 +76,7 @@ if [ ! -d "${HOME}/.oh-my-zsh" ]; then
     log "Installing Oh My Zsh..."
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -- --unattended
 fi
+echo 'alias vim="nvim"' >> ~/.zshrc
 
 # ──────────────────────────────────────────────────────────────
 # 3. TPM (Tmux Plugin Manager)
@@ -88,10 +89,10 @@ fi
 # ──────────────────────────────────────────────────────────────
 # 4. Safe .zshrc backup
 # ──────────────────────────────────────────────────────────────
-if [ -f "${HOME}/.zshrc" ] && ! grep -q "ohmyzsh" "${HOME}/.zshrc" 2>/dev/null; then
-    warn "Backing up existing ~/.zshrc → ~/.zshrc.backup"
-    mv "${HOME}/.zshrc" "${HOME}/.zshrc.backup"
-fi
+# if [ -f "${HOME}/.zshrc" ] && ! grep -q "ohmyzsh" "${HOME}/.zshrc" 2>/dev/null; then
+#     warn "Backing up existing ~/.zshrc → ~/.zshrc.backup"
+#     mv "${HOME}/.zshrc" "${HOME}/.zshrc.backup"
+# fi
 
 # ──────────────────────────────────────────────────────────────
 # 5. Ensure ~/.config exists
@@ -101,7 +102,7 @@ fi
 # ──────────────────────────────────────────────────────────────
 # 6. Stow dotfiles
 # ──────────────────────────────────────────────────────────────
-for dir in nvim zshrc tmux bin; do
+for dir in nvim tmux bin; do
     if [ -d "$dir" ]; then
         log "Stowing $dir"
         stow -R "$dir" 2>/dev/null || true
