@@ -20,7 +20,7 @@ return {
 			vim.keymap.set("n", "<leader>ro", "<cmd>CompilerOpen<CR>"),
 			vim.keymap.set("n", "<leader>rr", "<cmd>CompilerRedo<CR>"),
 			vim.keymap.set("n", "<leader>rt", "<cmd>CompilerToggleResults<CR>"),
-			rim.keymap.set("n", "<leader>rs", "<cmd>CompilerStop<CR>"),
+			vim.keymap.set("n", "<leader>rs", "<cmd>CompilerStop<CR>"),
 		},
 	},
 }
