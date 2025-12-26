@@ -7,14 +7,16 @@ return {
 				---Line-comment toggle keymap
 				line = "<leader>/",
 				---Block-comment toggle keymap
-				block = "gbc",
+				block = "gcb",
+				-- block = "<leader>/",
 			},
 			-- -LHS of operator-pending mappings in NORMAL and VISUAL mode
 			opleader = {
 				---Line-comment keymap
 				line = "<leader>/",
 				---Block-comment keymap
-				block = "gbc",
+				block = "gcb",
+				-- block = "<leader>/",
 			},
 			---LHS of extra mappings
 			extra = {

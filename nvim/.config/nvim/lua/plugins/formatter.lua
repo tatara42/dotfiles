@@ -17,6 +17,10 @@ return {
 				sh = { "shfmt" },
 				yaml = { "yamlfmt" },
 				cmake = { "cmakelang" },
+                json = { "clang-format" },
+                -- css = {"prettier" },
+                -- html = { "prettier" },
+                -- astro = { "prettier" },
 			},
 			format_on_save = false,
 

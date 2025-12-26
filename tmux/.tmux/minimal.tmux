@@ -41,7 +41,7 @@ get_tmux_option() {
 default_color="#[bg=default,fg=default,bold]"
 
 # variables
-bg=$(get_tmux_option "@minimal-tmux-bg" '#698DDA')
+bg=$(get_tmux_option "@minimal-tmux-bg" '#C1C1C3')
 fg=$(get_tmux_option "@minimal-tmux-fg" '#000000')
 
 use_arrow=$(get_tmux_option "@minimal-tmux-use-arrow" false)
