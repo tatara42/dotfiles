@@ -24,3 +24,12 @@ vim.opt.signcolumn = "yes"
 -- vim.opt.updatetime = 50
 -- vim.opt.colorcolumn = "100"
 
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+-- vim.opt.foldlevel = 1
+-- vim.opt.foldenable = false
+vim.opt.guicursor =  "n-v-c-sm-i:block,ci-ve:ver25,r-cr-o:hor20,t:block-blinkon500-blinkoff500-TermCursor"
+
+
+
+

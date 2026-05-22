@@ -7,7 +7,8 @@ return {
 		---@module 'render-markdown'
 		---@type render.md.UserConfig
 		opts = {
-            vim.keymap.set("n", "<leader>m", "<cmd>RenderMarkdown preview<cr>")
+            vim.keymap.set("n", "<leader>m", "<cmd>RenderMarkdown preview<cr>"),
+            vim.keymap.set("n", "<leader>M", "<cmd>RenderMarkdown toggle<cr>")
         },
 	},
 }

@@ -1,7 +1,7 @@
 local map = vim.keymap.set
 
 -- map("n", ";", ":", {})
-map("i", "jk", "<ESC>", {})
+-- map("i", "jk", "<ESC>", {})
 
 vim.keymap.set("n", "<leader>h", ":nohls<CR>")
 
