@@ -51,3 +51,4 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- vim.keymap.set("n", "<Tab>", "<cmd>tabnext<CR>", {desc = "Tab Next"})
 -- vim.keymap.set("n", "<S-Tab>", "<cmd>tabprevious<CR>", {desc = "Tab Previous"})
+
