@@ -11,7 +11,8 @@ vim.opt.shiftwidth = 2
 vim.opt.wrap = false
 
 vim.opt.swapfile = false
-vim.opt.backup = false vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 vim.opt.ignorecase = true
@@ -29,7 +30,3 @@ vim.opt.signcolumn = "yes"
 -- vim.opt.foldlevel = 1
 -- vim.opt.foldenable = false
 vim.opt.guicursor =  "n-v-c-sm-i:block,ci-ve:ver25,r-cr-o:hor20,t:block-blinkon500-blinkoff500-TermCursor"
-
-
-
-

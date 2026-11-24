@@ -5,8 +5,18 @@ return {
 	},
 	{
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.5",
 		dependencies = { "nvim-lua/plenary.nvim" },
+		cmd = "Telescope",
+		keys = {
+			{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
+			{ "<leader>fl", "<cmd>Telescope live_grep<cr>", desc = "Live Grep" },
+
+			{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "List Buffers" },
+			{ "<leader>bb", "<cmd>Telescope buffers<cr>", desc = "List Buffers" },
+			{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help Tags" },
+			{ "<leader>fd", "<cmd>Telescope diagnostics<cr>", desc = "Show Diagnostics" },
+			{ "grr", "<cmd>Telescope lsp_references<cr>", desc = "LSP References" },
+		},
 		config = function()
 			require("telescope").setup({
 				extensions = {
@@ -15,14 +25,6 @@ return {
 					},
 				},
 			})
-			local builtin = require("telescope.builtin")
-			vim.keymap.set("n", "<leader>ff", builtin.find_files, {desc="Find Files"})
-			vim.keymap.set("n", "<leader>fl", builtin.live_grep, {desc="Live Grep"})
-			vim.keymap.set("n", "<leader>fb", builtin.buffers, {desc="List Buffer"})
-			vim.keymap.set("n", "<leader>fh", builtin.help_tags, {desc="Help Tags"})
-			vim.keymap.set("n", "<leader>fd", builtin.diagnostics, {desc="Show Buffer Diagnostics"})
-			-- vim.keymap.set("n", "/", builtin.current_buffer_fuzzy_find, {})
-
 			require("telescope").load_extension("ui-select")
 		end,
 	},
