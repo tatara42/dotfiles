@@ -1,12 +1,13 @@
 return {
 	-- https://github.com/nvim-telescope/telescope.nvim
 	{
-		"nvim-telescope/telescope-ui-select.nvim",
-	},
-	{
 		"nvim-telescope/telescope.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope-ui-select.nvim",
+		},
 		cmd = "Telescope",
+		event = "VeryLazy",
 		keys = {
 			{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
 			{ "<leader>fl", "<cmd>Telescope live_grep<cr>", desc = "Live Grep" },
